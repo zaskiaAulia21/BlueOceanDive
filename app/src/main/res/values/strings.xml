@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BlueOceanDive</string>
+    <string name="error">Something went wrong, please try again later</string>
+</resources>

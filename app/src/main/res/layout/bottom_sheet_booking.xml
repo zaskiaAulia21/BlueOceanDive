@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:text="Book Now"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_select_tour_package_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Select the Tour Package"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_tour_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/background_rounded_white_8_corner"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_tour_package_label" />
+
+    <TextView
+        android:id="@+id/tv_additional_shuttle_service_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Additional Shuttle Service"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintTop_toBottomOf="@id/spinner_tour_package"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_additional_shuttle_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/background_rounded_white_8_corner"
+        app:layout_constraintTop_toBottomOf="@id/tv_additional_shuttle_service_label" />
+
+    <TextView
+        android:id="@+id/tv_pickup_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Pick Date"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintTop_toBottomOf="@id/spinner_additional_shuttle_service"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/background_rounded_white_8_corner"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_pickup_date">
+
+        <ImageView
+            android:id="@+id/iv_date"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_date" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:textColor="@color/hint"
+            android:text="Date" />
+
+        <ImageView
+            android:id="@+id/iv_chevron"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_keyboard_arrow_down"
+            app:tint="@color/hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_date_picker">
+
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="ll_order,ll_date_picker"/>
+
+    <Button
+        android:id="@+id/btn_book_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:background="@drawable/background_rounded_white"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Book Now"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:background="@drawable/background_rounded_white"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Checkout"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:background="@drawable/background_rounded_white"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_bold"
+        android:visibility="gone"
+        android:text="Add To Cart"
+        app:layout_constraintTop_toBottomOf="@id/btn_checkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

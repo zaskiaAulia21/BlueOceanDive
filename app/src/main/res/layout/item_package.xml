@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_package"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Amed Trip 2 Days 1 Night with Hotel &amp; Private Snorkeling"
+            android:textColor="@color/title"
+            android:textSize="10sp"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_package"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_duration"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_duration"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="2 Days"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="7sp"
+            app:layout_constraintTop_toTopOf="@id/iv_duration"
+            app:layout_constraintStart_toEndOf="@id/iv_duration"
+            app:layout_constraintBottom_toBottomOf="@id/iv_duration" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="iv_duration,tv_duration"
+            app:barrierDirection="bottom" />
+
+        <ImageView
+            android:id="@+id/iv_group"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_group"
+            app:layout_constraintTop_toBottomOf="@id/barrier_duration"
+            app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Private Trip + Documentation"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="7sp"
+            app:layout_constraintTop_toTopOf="@id/iv_group"
+            app:layout_constraintStart_toEndOf="@id/iv_group"
+            app:layout_constraintBottom_toBottomOf="@id/iv_group" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="iv_group,tv_group"
+            app:barrierDirection="bottom" />
+
+        <ImageView
+            android:id="@+id/iv_review"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_review"
+            app:layout_constraintTop_toBottomOf="@id/barrier_group"
+            app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="0 Review"
+            android:textColor="@color/hint"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="7sp"
+            app:layout_constraintTop_toTopOf="@id/iv_review"
+            app:layout_constraintStart_toEndOf="@id/iv_review"
+            app:layout_constraintBottom_toBottomOf="@id/iv_review" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="iv_review,tv_review"
+            app:barrierDirection="bottom" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Start From IDR 665.000/Pax"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="8sp"
+            app:layout_constraintTop_toBottomOf="@id/barrier_review"
+            app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_review"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_view_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:background="@color/tosca"
+            app:backgroundTint="@color/tosca"
+            android:layout_marginEnd="8dp"
+            android:paddingVertical="8dp"
+            android:layout_marginBottom="8dp"
+            android:minHeight="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:includeFontPadding="false"
+            android:textSize="8sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/tv_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ll_review"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

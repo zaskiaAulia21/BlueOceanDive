@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cl_total_payment">
+
+            <ImageView
+                android:id="@+id/iv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/header_gallery_process"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/overlay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/iv_header" />
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@color/border_80"
+                app:tint="@color/white"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginEnd="16dp"
+                android:text="Amed Trip 2 Days 1 Night with Hotel &amp; Private Snorkeling"
+                app:layout_constraintBottom_toTopOf="@id/ll_review"
+                app:layout_constraintStart_toStartOf="@id/iv_back"
+                app:layout_constraintEnd_toEndOf="@id/guideline" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <LinearLayout
+                android:id="@+id/ll_review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_header"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_header">
+
+                <TextView
+                    android:id="@+id/tv_start_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginEnd="16dp"
+                    android:text="START FROM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_price_tag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_price_tag"
+                    android:background="@drawable/circle"
+                    app:layout_constraintTop_toBottomOf="@id/tv_start_from"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="10dp"
+                    android:text="IDR 665.000/"
+                    app:layout_constraintTop_toTopOf="@id/iv_price_tag"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_price_tag"
+                    app:layout_constraintStart_toEndOf="@id/iv_price_tag" />
+
+                <TextView
+                    android:id="@+id/tv_price_pax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/secondary"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginEnd="16dp"
+                    android:text="/Pax"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@id/tv_price"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_price"
+                    app:layout_constraintStart_toEndOf="@id/tv_price" />
+
+                <TextView
+                    android:id="@+id/tv_price_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/secondary"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginEnd="16dp"
+                    android:text="The listed price is for 1 person\nPlease make a reservation at least two days in advance"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@id/iv_price_tag"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_duration"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="6dp"
+                    app:tint="@color/secondary"
+                    android:src="@drawable/ic_duration"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price_description"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/secondary"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="2 Days"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@id/iv_duration"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_duration"
+                    app:layout_constraintStart_toEndOf="@id/iv_duration" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="20dp"
+                    app:tint="@color/secondary"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price_description"
+                    app:layout_constraintStart_toEndOf="@id/tv_duration" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/secondary"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Amed, Karangasem, Bali"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@id/iv_location"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_location"
+                    app:layout_constraintStart_toEndOf="@id/iv_location" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Descriptions"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/cl_info"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Enjoy your holiday in Amed with our 2 days 1 night package, which includes hotel accommodations and private snorkeling. Experience the natural beauty of Amed with its stunning sea views. Amed offers tranquility and a unique atmosphere. In the morning, engage in snorkeling activities, and in the afternoon, watch the beautiful sunset at Amed beach. Click on the package details below for more information."
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_description_label"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_include_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Include"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_include"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Enjoy your holiday in Amed with our 2 days 1 night package, which includes hotel accommodations and private snorkeling. Experience the natural beauty of Amed with its stunning sea views. Amed offers tranquility and a unique atmosphere. In the morning, engage in snorkeling activities, and in the afternoon, watch the beautiful sunset at Amed beach. Click on the package details below for more information."
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_include_label"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_note_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Note"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_include"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="@color/subtitle"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Enjoy your holiday in Amed with our 2 days 1 night package, which includes hotel accommodations and private snorkeling. Experience the natural beauty of Amed with its stunning sea views. Amed offers tranquility and a unique atmosphere. In the morning, engage in snorkeling activities, and in the afternoon, watch the beautiful sunset at Amed beach. Click on the package details below for more information."
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_note_label"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_total_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_detail_package"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_total_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:includeFontPadding="false"
+            android:text="IDR 10000"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_pax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginEnd="12dp"
+            android:text="/Pax"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_total_payment"/>
+
+        <Button
+            android:id="@+id/btn_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:background="@drawable/background_rounded_white_8_corner"
+            app:backgroundTint="@color/white"
+            android:includeFontPadding="false"
+            android:text="Book Now"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

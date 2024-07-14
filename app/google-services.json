@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "689039700407",
+    "firebase_url": "https://blueoceandive-1ecc9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "blueoceandive-1ecc9",
+    "storage_bucket": "blueoceandive-1ecc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689039700407:android:90989dcac92fd1262eb832",
+        "android_client_info": {
+          "package_name": "com.example.blueoceandive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBQsKvyXb2WPMQqd1ItI0QjT7KDN4WV7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
